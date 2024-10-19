@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "Node.js",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "formulahendry.code-runner",
+		  "ritwickdey.LiveServer",
+		  "esbenp.prettier-vscode",
+		  "dbaeumer.vscode-eslint",
+		  "GitHub.copilot"
+		]
+	  }
+	},
+	"postCreateCommand": "echo '{\"name\":\"no_name\",\"version\":\"0.0.1\",\"type\":\"module\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"keywords\":[],\"author\":\"\",\"license\":\"ISC\"}' > package.json && npm install --save-dev prettier eslint && echo '{\"semi\":true,\"singleQuote\":true,\"tabWidth\":2,\"trailingComma\":\"es5\"}' > .prettierrc.json && echo 'import eslint from \"eslint\"; export default [{files:[\"**/*.js\"],languageOptions:{ecmaVersion:\"latest\",sourceType:\"module\"},rules:{indent:[\"error\",2],\"linebreak-style\":[\"error\",\"unix\"],quotes:[\"error\",\"single\"],semi:[\"error\",\"always\"]},},];' > eslint.config.js"
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
