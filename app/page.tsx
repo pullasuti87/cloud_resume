@@ -1,95 +1,89 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from './page.module.css';
+import WorkExperience from './Experience';
+import Education from './Education';
+import Projects from './Projects';
+import Skills from './Skills';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div id="cv">
+          <MainDetails />
+          <MainArea />
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    </div>
+  );
+}
+
+function MainDetails() {
+  return (
+    <div className={styles.mainDetails}>
+      <div id="name">
+        <h1
+          className={`${styles.quickFade} ${styles.two}`}
+          style={{ marginBottom: '0.33em' }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Juho-Pekka Mäkinen
+        </h1>
+        <h2
+          className={`${styles.quickFade} ${styles.three}`}
+          style={{ marginTop: '-0.33em', marginBottom: '0.33em' }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Student at the University of Jyväskylä
+        </h2>
+        <h3
+          className={`${styles.quickFade} ${styles.four}`}
+          style={{ marginTop: '-0.33em', textIndent: '4px' }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          page visits: <span id="count"></span>
+        </h3>
+      </div>
+      <ContactDetails />
+    </div>
+  );
+}
+
+function ContactDetails() {
+  return (
+    <div id="contact-details" className={`${styles.quickFade} ${styles.four}`}>
+      <ul>
+        <li>
+          <a
+            href="mailto:juho-pekka.jp.makinen@student.jyu.fi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            makiju@student.jyu.fi
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/pullasuti87"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github
+          </a>
+        </li>
+        <li>
+          <a href="cv.pdf" target="_blank" download="vc.pdf">
+            download resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function MainArea() {
+  return (
+    <div id="main-area" className={`${styles.quickFade} ${styles.five}`}>
+      <WorkExperience />
+      <Education />
+      <Projects />
+      <Skills />
     </div>
   );
 }
