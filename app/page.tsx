@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import WorkExperience from './Experience';
+import Experience from './Experience';
 import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -9,45 +9,32 @@ export default function Home() {
     <div>
       <main className={styles.main}>
         <div id="cv">
-          <MainDetails />
-          <MainArea />
+          <Details />
+          <Main />
         </div>
       </main>
     </div>
   );
 }
 
-function MainDetails() {
+function Details() {
   return (
-    <div className={styles.mainDetails}>
+    <div>
       <div id="name">
-        <h1
-          className={`${styles.quickFade} ${styles.two}`}
-          style={{ marginBottom: '0.33em' }}
-        >
-          Juho-Pekka Mäkinen
-        </h1>
-        <h2
-          className={`${styles.quickFade} ${styles.three}`}
-          style={{ marginTop: '-0.33em', marginBottom: '0.33em' }}
-        >
-          Student at the University of Jyväskylä
-        </h2>
-        <h3
-          className={`${styles.quickFade} ${styles.four}`}
-          style={{ marginTop: '-0.33em', textIndent: '4px' }}
-        >
+        <h1>Juho-Pekka Mäkinen</h1>
+        <h2>Student at the University of Jyväskylä</h2>
+        <h3>
           page visits: <span id="count"></span>
         </h3>
       </div>
-      <ContactDetails />
+      <Contact />
     </div>
   );
 }
 
-function ContactDetails() {
+function Contact() {
   return (
-    <div id="contact-details" className={`${styles.quickFade} ${styles.four}`}>
+    <div id="contact-details">
       <ul>
         <li>
           <a
@@ -77,10 +64,10 @@ function ContactDetails() {
   );
 }
 
-function MainArea() {
+function Main() {
   return (
-    <div id="main-area" className={`${styles.quickFade} ${styles.five}`}>
-      <WorkExperience />
+    <div id="main-area">
+      <Experience />
       <Education />
       <Projects />
       <Skills />
