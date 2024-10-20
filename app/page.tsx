@@ -3,6 +3,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
+import Certifications from './Certifications';
 
 export default function Home() {
   return (
@@ -67,10 +68,11 @@ function Contact() {
 function Main() {
   return (
     <div id="main-area">
-      <Experience />
       <Education />
+      <Experience />
       <Projects />
-      <Skills />
+      <Skills/>
+      <Certifications/>
     </div>
   );
 }

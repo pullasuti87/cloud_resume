@@ -5,28 +5,24 @@ interface Info {
   title: string;
   time: string;
   details: string[];
-  collapsible?: boolean;
+  // ? makes optional
+  hidden?: boolean;
 }
 
-const Job: React.FC<Info> = ({
-  title,
-  time,
-  details,
-  collapsible = false,
-}) => {
+const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
   const content = (
     <div>
       <h2>{title}</h2>
       <p>{time}</p>
       <ul>
-        {details.map((detail, index) => (
-          <li key={index}>{detail}</li>
+        {details.map((d, index) => (
+          <li key={index}>{d}</li>
         ))}
       </ul>
     </div>
   );
 
-  if (collapsible) {
+  if (hidden) {
     return (
       <article>
         <details>
@@ -35,8 +31,8 @@ const Job: React.FC<Info> = ({
             <p>{time}</p>
           </summary>
           <ul>
-            {details.map((detail, index) => (
-              <li key={index}>{detail}</li>
+            {details.map((d, i) => (
+              <li key={i}>{d}</li>
             ))}
           </ul>
         </details>
@@ -50,15 +46,21 @@ const Job: React.FC<Info> = ({
 const Experience: React.FC = () => {
   const jobs: Info[] = [
     {
-      title: 'a',
-      time: 'September 2023 - Present',
-      details: ['something... something...'],
+      title: 'Temporary Employee in the Social and Healthcare sector',
+      time: 'August 2020 - Present',
+      details: [
+        'Created and maintained reporting systems to support effective communication and transparency within the team.',
+        'Collaborated with team members to address client needs and coordinate care, ensuring a cohesive and efficient approach',
+      ],
     },
     {
-      title: 'b',
-      time: 'June 2023 - September 2023',
-      details: ['say something!'],
-      collapsible: true,
+      title: 'Permanent Employee in the Social and Healthcare sector',
+      time: 'August 2011 - May 2020',
+      details: [
+        'Assisted in developing and managing processes to support client care and improve service delivery.',
+        'Utilized organizational skills to manage and document client interactions, contributing to the overall effectiveness of the team.',
+      ],
+      hidden: true,
     },
   ];
 
@@ -71,8 +73,8 @@ const Experience: React.FC = () => {
         </h1>
       </div>
       <div>
-        {jobs.map((job, index) => (
-          <Job key={index} {...job} />
+        {jobs.map((j, i) => (
+          <Job key={i} {...j} />
         ))}
       </div>
     </section>

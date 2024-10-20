@@ -5,7 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Your Resume Title',
+  title: 'Resume | Juho-Pekka Mäkinen',
   description: 'Resume of Juho-Pekka Mäkinen',
   robots: {
     index: false,
