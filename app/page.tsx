@@ -8,9 +8,10 @@ import Certifications from './Certifications';
 export default function Home() {
   return (
     <div>
-      <main className={styles.main}>
-        <div id="cv">
+      <main>
+        <div>
           <Details />
+          <div className={styles.separator}></div>
           <Main />
         </div>
       </main>
@@ -21,11 +22,11 @@ export default function Home() {
 function Details() {
   return (
     <div>
-      <div id="name">
+      <div>
         <h1>Juho-Pekka Mäkinen</h1>
         <h2>Student at the University of Jyväskylä</h2>
         <h3>
-          page visits: <span id="count"></span>
+          page visits: <span></span>
         </h3>
       </div>
       <Contact />
@@ -35,7 +36,7 @@ function Details() {
 
 function Contact() {
   return (
-    <div id="contact-details">
+    <div>
       <ul>
         <li>
           <a
@@ -67,12 +68,12 @@ function Contact() {
 
 function Main() {
   return (
-    <div id="main-area">
+    <div>
       <Education />
       <Experience />
       <Projects />
-      <Skills/>
-      <Certifications/>
+      <Skills />
+      <Certifications />
     </div>
   );
 }
