@@ -14,7 +14,7 @@
 		]
 	  }
 	},
-	"postCreateCommand": "echo '{\"name\":\"no_name\",\"version\":\"0.0.1\",\"type\":\"module\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"keywords\":[],\"author\":\"\",\"license\":\"ISC\"}' > package.json && npm install --save-dev prettier eslint && echo '{\"semi\":true,\"singleQuote\":true,\"tabWidth\":2,\"trailingComma\":\"es5\"}' > .prettierrc.json && echo 'import eslint from \"eslint\"; export default [{files:[\"**/*.js\"],languageOptions:{ecmaVersion:\"latest\",sourceType:\"module\"},rules:{indent:[\"error\",2],\"linebreak-style\":[\"error\",\"unix\"],quotes:[\"error\",\"single\"],semi:[\"error\",\"always\"]},},];' > eslint.config.js"
+	"postCreateCommand": "npm install",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
