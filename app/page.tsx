@@ -61,7 +61,7 @@ function Contact() {
         </li>
         <li>
           <a
-            className="hover:text-orange-500 underline"
+            className="hover:text-orange-500 underlie"
             href="cv.pdf"
             target="_blank"
             download="vc.pdf"
