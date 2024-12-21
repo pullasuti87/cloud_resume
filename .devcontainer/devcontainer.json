@@ -10,7 +10,8 @@
 		  "ritwickdey.LiveServer",
 		  "esbenp.prettier-vscode",
 		  "dbaeumer.vscode-eslint",
-		  "GitHub.copilot"
+		  "GitHub.copilot",
+		  "bradlc.vscode-tailwindcss"
 		]
 	  }
 	},

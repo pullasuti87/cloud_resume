@@ -17,7 +17,7 @@ const Skills = () => {
   const t = [
     {
       title: 'Languages',
-      skills: ['Python', 'JavaScript', 'TypeScript', 'Go', 'SQL', 'HTML/CSS'],
+      skills: ['JavaScript', 'TypeScript', 'Python', 'Go', 'SQL', 'HTML/CSS'],
     },
     {
       title: 'Frameworks & Libraries',
@@ -39,7 +39,7 @@ const Skills = () => {
 
   return (
     <div>
-      <h2>Skills</h2>
+      <h1 className="text-xl italic font-semibold">Skills</h1>
       {t.map((s, index) => (
         <Skill key={index} title={s.title} skills={s.skills} />
       ))}

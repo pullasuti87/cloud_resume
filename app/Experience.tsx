@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from './Experience.module.css';
 
 interface Info {
   title: string;
@@ -14,7 +13,7 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
     <div>
       <h2>{title}</h2>
       <p>{time}</p>
-      <ul>
+      <ul className="list-disc pl-5">
         {details.map((d, index) => (
           <li key={index}>{d}</li>
         ))}
@@ -30,7 +29,7 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
             <h2>{title}</h2>
             <p>{time}</p>
           </summary>
-          <ul>
+          <ul className="list-disc pl-5">
             {details.map((d, i) => (
               <li key={i}>{d}</li>
             ))}
@@ -49,16 +48,15 @@ const Experience: React.FC = () => {
       title: 'Temporary Employee in the Social and Healthcare sector',
       time: 'August 2020 - Present',
       details: [
-        'Created and maintained reporting systems to support effective communication and transparency within the team.',
-        'Collaborated with team members to address client needs and coordinate care, ensuring a cohesive and efficient approach',
+        'Worked as a healthcare professional in various nursing roles across different locations.',
       ],
     },
     {
       title: 'Permanent Employee in the Social and Healthcare sector',
       time: 'August 2011 - May 2020',
       details: [
-        'Assisted in developing and managing processes to support client care and improve service delivery.',
-        'Utilized organizational skills to manage and document client interactions, contributing to the overall effectiveness of the team.',
+        'Worked as a Registered Nurse providing patient care while serving as the unit"s IT support person for staff members.',
+        'Managed clinical system access and provided basic operating system support for colleagues, including unlocking accounts and creating temporary login credentials.',
       ],
       hidden: true,
     },
@@ -67,7 +65,7 @@ const Experience: React.FC = () => {
   return (
     <section>
       <div>
-        <h1>
+        <h1 className="text-xl font-semibold italic">
           Work <br />
           Experience
         </h1>

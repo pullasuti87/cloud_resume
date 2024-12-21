@@ -1,4 +1,3 @@
-import styles from './page.module.css';
 import Experience from './Experience';
 import Education from './Education';
 import Projects from './Projects';
@@ -11,7 +10,7 @@ export default function Home() {
       <main>
         <div>
           <Details />
-          <div className={styles.separator}></div>
+          <div className="w-full border-b border-orange-500"></div>
           <Main />
         </div>
       </main>
@@ -23,11 +22,13 @@ function Details() {
   return (
     <div>
       <div>
-        <h1>Juho-Pekka Mäkinen</h1>
-        <h2>Student at the University of Jyväskylä</h2>
-        <h3>
+        <h1 className="text-4xl font-bold">Juho-Pekka Mäkinen</h1>
+        <h2 className="text-2xl font-semibold">
+          Student at the University of Jyväskylä
+        </h2>
+        <p>
           page visits: <span></span>
-        </h3>
+        </p>
       </div>
       <Contact />
     </div>
@@ -40,6 +41,7 @@ function Contact() {
       <ul>
         <li>
           <a
+            className="0 hover:text-orange-500 underline "
             href="mailto:juho-pekka.jp.makinen@student.jyu.fi"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,6 +51,7 @@ function Contact() {
         </li>
         <li>
           <a
+            className="hover:text-orange-500 underline "
             href="https://github.com/pullasuti87"
             target="_blank"
             rel="noopener noreferrer"
@@ -57,7 +60,12 @@ function Contact() {
           </a>
         </li>
         <li>
-          <a href="cv.pdf" target="_blank" download="vc.pdf">
+          <a
+            className="hover:text-orange-500 underline"
+            href="cv.pdf"
+            target="_blank"
+            download="vc.pdf"
+          >
             download resume
           </a>
         </li>

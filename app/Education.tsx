@@ -1,5 +1,5 @@
 function Education() {
-  return <div><h2>Education</h2></div>;
+  return <div><h1 className="text-xl font-semibold italic">Education</h1></div>;
 }
 
 export default Education;
