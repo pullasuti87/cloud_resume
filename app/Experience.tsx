@@ -26,8 +26,8 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
       <article>
         <details>
           <summary>
-            <h2>{title}</h2>
-            <p>{time}</p>
+            <span className="font-semibold text-base">{title}</span>
+            <span className='block'>{time}</span>
           </summary>
           <ul className="list-disc pl-5">
             {details.map((d, i) => (
@@ -65,10 +65,7 @@ const Experience: React.FC = () => {
   return (
     <section>
       <div>
-        <h1 className="text-xl font-semibold italic">
-          Work <br />
-          Experience
-        </h1>
+        <h1 className="text-xl font-semibold italic">Work Experience</h1>
       </div>
       <div>
         {jobs.map((j, i) => (

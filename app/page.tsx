@@ -6,7 +6,7 @@ import Certifications from './Certifications';
 
 export default function Home() {
   return (
-    <div className='mx-auto max-w-[700px]'>
+    <div>
       <main>
         <div>
           <Details />
@@ -20,7 +20,7 @@ export default function Home() {
 
 function Details() {
   return (
-    <div className='flex justify-between'>
+    <div className="flex justify-between">
       <div>
         <h1 className="text-4xl font-bold">Juho-Pekka Mäkinen</h1>
         <h2 className="text-2xl font-semibold">
@@ -61,10 +61,11 @@ function Contact() {
         </li>
         <li>
           <a
-            className="hover:text-orange-500 underlie"
-            href="cv.pdf"
+            className="hover:text-orange-500 underline"
+            href="testi.pdf"
             target="_blank"
-            download="vc.pdf"
+            rel="noopener noreferrer"
+            download="resume.pdf"
           >
             download resume
           </a>
