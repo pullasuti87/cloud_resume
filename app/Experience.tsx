@@ -11,7 +11,7 @@ interface Info {
 const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
   const content = (
     <div>
-      <h2>{title}</h2>
+      <h2 className="font-semibold text-base">{title}</h2>
       <p>{time}</p>
       <ul className="list-disc pl-5">
         {details.map((d, index) => (

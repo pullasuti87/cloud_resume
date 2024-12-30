@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <div>
       <main>
-        <div>
-          <Details />
-          <div className="w-full border-b border-orange-500"></div>
+        <div className="mb-4">
+          <MyDetails />
+        </div>
+        <div className="w-full border-b border-orange-500"></div>
+        <div className="mt-4">
           <Main />
         </div>
       </main>
@@ -18,7 +20,7 @@ export default function Home() {
   );
 }
 
-function Details() {
+function MyDetails() {
   return (
     <div className="flex justify-between">
       <div>
@@ -30,12 +32,12 @@ function Details() {
           page visits: <span></span>
         </p>
       </div>
-      <Contact />
+      <Links />
     </div>
   );
 }
 
-function Contact() {
+function Links() {
   return (
     <div>
       <ul>
@@ -78,11 +80,25 @@ function Contact() {
 function Main() {
   return (
     <div>
-      <Education />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Certifications />
+      <div className="mb-4">
+        <Education />
+      </div>
+      <div className="w-[80%] mx-auto border-b border-gray-300"></div>
+      <div className="mt-4 mb-4">
+        <Experience />
+      </div>
+      <div className="w-[80%] mx-auto border-b border-gray-300"></div>
+      <div className="mt-4 mb-4">
+        <Projects />
+      </div>
+      <div className="w-[80%] mx-auto border-b border-gray-300"></div>
+      <div className="mt-4 mb-4">
+        <Skills />
+      </div>
+      <div className="w-[80%] mx-auto border-b border-gray-300"></div>
+      <div className="mt-4">
+        <Certifications />
+      </div>
     </div>
   );
 }
