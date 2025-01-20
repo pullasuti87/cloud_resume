@@ -10,4 +10,4 @@
 - IaC using terraform
 - CI/CD github actions
 
-website: https://jolly-pond-0f2566803.4.azurestaticapps.net/
+ website: https://jolly-pond-0f2566803.4.azurestaticapps.net/

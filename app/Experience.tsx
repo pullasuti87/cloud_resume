@@ -8,9 +8,9 @@ interface Info {
 
 const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
   const content = (
-    <div >
+    <div>
       <h2 className="font-semibold text-base">{title}</h2>
-      <p className='text-sm italic'>{time}</p>
+      <p className="text-sm italic">{time}</p>
       <ul className="list-disc pl-5">
         {details.map((d, index) => (
           <li key={index}>{d}</li>
@@ -21,11 +21,11 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
 
   if (hidden) {
     return (
-      <article className='mt-2'>
+      <article className="mt-2">
         <details>
           <summary>
             <span className="font-semibold text-base">{title}</span>
-            <span className='block text-sm italic'>{time}</span>
+            <span className="block text-sm italic">{time}</span>
           </summary>
           <ul className="list-disc pl-5">
             {details.map((d, i) => (
@@ -37,7 +37,7 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
     );
   }
 
-  return <article >{content}</article>;
+  return <article>{content}</article>;
 };
 
 const Experience: React.FC = () => {

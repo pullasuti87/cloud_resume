@@ -1,4 +1,3 @@
-
 interface Info {
   title: string;
   time: string;

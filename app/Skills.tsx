@@ -1,4 +1,3 @@
-
 interface Skill {
   title: string;
   skills: string[];
@@ -7,7 +6,8 @@ interface Skill {
 const Skill: React.FC<Skill> = ({ title, skills }) => (
   <div>
     <p>
-      <span className=''>{title}:</span> <span className='text-sm italic'>{skills.join(', ')}</span>
+      <span className="">{title}:</span>{' '}
+      <span className="text-sm italic">{skills.join(', ')}</span>
     </p>
   </div>
 );

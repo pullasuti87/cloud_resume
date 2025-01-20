@@ -3,19 +3,7 @@
 import { useEffect, useState } from 'react';
 
 const Visitors = () => {
-  const get = async () => {
-    const res = await fetch('/api/visitors');
-    const data = await res.json();
-  };
-
-  const post = async () => {
-    const res = await fetch('/api/visitors', { method: 'POST' });
-    const data = await res.json();
-    console.log(data);
-  };
-
   const [count, setCount] = useState(0);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     const updateCount = async () => {
@@ -24,33 +12,29 @@ const Visitors = () => {
         const result = await response.json();
 
         const visitorCount = result.data[0].count;
-        setCount(visitorCount);
+        setCount(Number(visitorCount));
 
-        if (!sessionStorage.getItem('counted')) {
-          const postRes = await fetch('/api/visitors', {
-            method: 'POST',
-          });
-          const update = await postRes.json();
+        if (
+          sessionStorage.getItem('counted') == undefined ||
+          !sessionStorage.getItem('counted')
+        ) {
+          const postResponse = await fetch('/api/visitors', { method: 'POST' });
+          const updatedResponse = await fetch('/api/visitors');
+          const updatedResult = await updatedResponse.json();
 
-          setCount(update.data[0].count);
-          sessionStorage.setItem('counted', 'true');
-        } else {
-          setError('failed to session count');
+          const updated = updatedResult.data[0].count;
+          setCount(Number(updated));
         }
       } catch (e) {
-        setError('failed to try count');
         console.error('error:', e);
       }
     };
-
     updateCount();
   }, []);
 
   return (
     <div>
       <p>{count}</p>
-      <button onClick={get}>yeah</button>
-      <button onClick={post}>ppistyeah</button>
     </div>
   );
 };
