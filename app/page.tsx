@@ -31,12 +31,12 @@ function MyDetails() {
         </h2>
         <div className="flex">
           <p className="flex">page visits:</p>
-          <div className="ml-1">
-            <Visitors />
-          </div>
+            <div className="ml-1">
+            <Visitors/>
+            </div>
         </div>
       </div>
-      <div className='text-sm'>
+      <div className="text-sm">
         <Links />
       </div>
     </div>
