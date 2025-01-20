@@ -13,20 +13,20 @@ export async function GET() {
     try {
         const { resources } = await container.items.readAll().fetchAll();
         return NextResponse.json({ data: resources });
-    } catch (error) {
-        console.error('fetching error:', error);
+
+    } catch (e) {
+        console.error('get error:', e);
     }
 }
 
 export async function POST() {
     try {
-        const item = {
-            id: new Date().toISOString(),
-            message: 'test'
-        };
-        await container.items.create(item);
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error('fetching data:', error);
+        const { resources } = await container.items.readAll().fetchAll();
+        return NextResponse.json({ count: resources[0].count });
+
+
+    } catch (e) {
+        console.error('post error:', e);
     }
 }
+
