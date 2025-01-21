@@ -55,3 +55,13 @@ logs
 .eslintcache
 .npm
 .stylelintcache
+
+# terraform
+.terraform/
+terraform-provider-*
+*.tfstate*
+*.tfvars
+.terraform.lock.hcl
+crash.log
+*.backup
+tfplan

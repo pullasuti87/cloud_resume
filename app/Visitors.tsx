@@ -22,7 +22,7 @@ const Visitors = () => {
   }, []);
 
   if (count === undefined) {
-    return <div>...</div>;
+    return <div className="animate-bounce">...</div>;
   }
 
   return (
