@@ -8,8 +8,8 @@ const Visitors = () => {
   useEffect(() => {
     const updateCount = async () => {
       try {
-        const postResponse = await fetch('/api/visitors', { method: 'POST' });
-        const response = await fetch('/api/visitors');
+        const postResponse = await fetch('../api/visitors', { method: 'POST' });
+        const response = await fetch('../api/visitors');
         const result = await response.json();
 
         const visitorCount = result.data[0].count;

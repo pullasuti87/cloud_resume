@@ -1,9 +1,9 @@
-import Experience from './Experience';
-import Education from './Education';
-import Projects from './Projects';
-import Skills from './Skills';
-import Certifications from './Certifications';
-import Visitors from './Visitors';
+import Experience from '../components/Sections/Experience';
+import Education from '../components/Sections/Education';
+import Projects from '../components/Sections/Projects';
+import Skills from '../components/Sections/Skills';
+import Certifications from '../components/Sections/Certifications';
+import Visitors from '../components/UI/Visitors';
 
 export default function Home() {
   return (

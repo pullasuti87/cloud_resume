@@ -24,7 +24,7 @@ const Certifications = () => {
 
   return (
     <div>
-      <h1 className="text-xl font-semibold italic">Certifications</h1>
+      <h1 className="text-xl italic font-semibold">Certifications</h1>
       {certifications.map((c, i) => (
         <Item key={i} title={c.title} date={c.date} />
       ))}
