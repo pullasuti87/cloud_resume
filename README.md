@@ -1,7 +1,7 @@
 # my cloud resume 
 
 - my resume website built 
-- tech:  next.js, html/css, azure, terraform, github actions
+- tech:  next.js, tailwind, azure, terraform, github actions
 
 ## features
 
