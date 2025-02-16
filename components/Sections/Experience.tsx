@@ -22,12 +22,12 @@ const Job: React.FC<Info> = ({ title, time, details, hidden = false }) => {
   if (hidden) {
     return (
       <article className="mt-2">
-        <details>
-          <summary>
+        <details className="cursor-pointer">
+          <summary >
             <span className="font-semibold text-base">{title}</span>
             <span className="block text-sm italic">{time}</span>
           </summary>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 cursor-default">
             {details.map((d, i) => (
               <li key={i}>{d}</li>
             ))}
