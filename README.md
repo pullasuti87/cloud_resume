@@ -6,7 +6,7 @@
 ## features
 
 - serverless using azure functions
-- hosting azure storage
+- hosting azure storage (not anymore because, using only sql db)
 - IaC using terraform
 - CI/CD github actions
 
